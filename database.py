@@ -299,7 +299,7 @@ def restore_districts():
 
 create_table_profile()
 create_table_region()
-modify_table_profile_phone()
 alter_table_profile()
+modify_table_profile_phone()
 create_table_district()
 add_table_profile_location()
