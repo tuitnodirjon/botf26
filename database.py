@@ -285,16 +285,22 @@ def select_all_regions():
 def restore_regions():
     file = open('data/regions.csv')
     csvreader = csv.reader(file)
-    for row in csvreader:
-        insert_region_to_table(row[0], row[1])
+    try:
+        for row in csvreader:
+            insert_region_to_table(row[0], row[1])
+    except Exception as e:
+        pass
 
 
 def restore_districts():
     file = open('data/districts.csv')
     csvreader = csv.reader(file)
-    for row in csvreader:
-        print(row)
-        insert_district_to_table_with_id(row[0], row[3], row[1])
+    try:
+        for row in csvreader:
+            print(row)
+            insert_district_to_table_with_id(row[0], row[3], row[1])
+    except Exception as e:
+        pass
 
 
 create_table_profile()
@@ -303,3 +309,5 @@ alter_table_profile()
 modify_table_profile_phone()
 create_table_district()
 add_table_profile_location()
+restore_regions()
+restore_districts()
