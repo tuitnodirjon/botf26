@@ -3,7 +3,7 @@ import csv
 
 
 def get_connection():
-    conn = psycopg2.connect(database='f26bot', user='postgres', password='postgres', host='localhost', port=5432)
+    conn = psycopg2.connect(database='f26bot', user='f26bot', password='f26bot', host='localhost', port=5432)
 
     return conn
 
